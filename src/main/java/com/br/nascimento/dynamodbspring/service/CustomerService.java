@@ -39,6 +39,7 @@ public class CustomerService {
 
     public String update(String customerId, Customer customer){
         log.info("Atualizando Customers {} pelo id {}", customer,customerId);
+        customer.setCustomerId(customerId);
         return repository.updateCustomer(customerId,customer);
     }
 }
